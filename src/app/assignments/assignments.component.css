@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ajouterBtn {
+  align-self: flex-end;
+}
+
+.card-priority0 {
+  border: 1px solid;
+  box-shadow: rgba(128, 128, 128, 0.4) 5px 5px,
+              rgba(128, 128, 128, 0.3) 10px 10px,
+              rgba(128, 128, 128, 0.2) 15px 15px,
+              rgba(128, 128, 128, 0.1) 20px 20px,
+              rgba(128, 128, 128, 0.05) 25px 25px,
+              rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.card-priority1 {
+  border: 1px solid;
+  box-shadow: rgba(255, 128, 0, 0.4) 5px 5px,
+              rgba(255, 128, 0, 0.3) 10px 10px,
+              rgba(255, 128, 0, 0.2) 15px 15px,
+              rgba(255, 128, 0, 0.1) 20px 20px,
+              rgba(255, 128, 0, 0.05) 25px 25px,
+              rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.card-priority2 {
+  border: 1px solid;
+  box-shadow: rgba(255, 0, 0, 0.4) 5px 5px,
+              rgba(255, 0, 0, 0.3) 10px 10px,
+              rgba(255, 0, 0, 0.2) 15px 15px,
+              rgba(255, 0, 0, 0.1) 20px 20px,
+              rgba(255, 0, 0, 0.05) 25px 25px,
+              rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.card-priority3 {
+  border: 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px,
+              rgba(0, 0, 0, 0.3) 10px 10px,
+              rgba(0, 0, 0, 0.2) 15px 15px,
+              rgba(0, 0, 0, 0.1) 20px 20px,
+              rgba(0, 0, 0, 0.05) 25px 25px,
+              rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}

@@ -1,0 +1,53 @@
+<main class="container">
+  <a routerLink="/add" class="ajouterBtn">
+    <button mat-flat-button color="accent">
+      Ajouter un assignment
+    </button>
+  </a>
+  <h1>Liste des assignments</h1>
+  <mat-divider></mat-divider>
+  <nav>
+    <button mat-raised-button color="primary" (click)="premierePage()">
+      Première
+    </button>
+    <button mat-raised-button color="primary" [disabled]="!hasPrevPage" (click)="pagePrecedente()">
+      Prev
+    </button>
+    <button mat-raised-button color="primary" [disabled]="!hasNextPage" (click)="pageSuivante()">
+      Suiv
+    </button>
+    <button mat-raised-button color="primary" (click)="dernierePage()">
+      Dernière
+    </button>
+  </nav>
+
+  <div *ngFor="let a of assignments">
+    <a routerLink="/assignment/{{a.id}}">
+      <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="50px grid">
+          <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%">
+            <mat-card [ngClass]="getPriorityClass(a.dateDeRendu)">
+              <mat-card-title-group>
+                <mat-card-title>{{a.matiere}}</mat-card-title>
+                <mat-card-subtitle>{{a.nom}}</mat-card-subtitle>
+              </mat-card-title-group>
+              <mat-card-content>
+                <div class="row" *ngIf="a.rendu; else nonsoumis">
+                  <mat-icon appRendu>event</mat-icon>
+                  <span>Rendu le {{a.dateDeRendu}}</span>
+                </div>
+                <ng-template #nonsoumis>
+                  <div class="row">
+                    <mat-icon appNonRendu>event</mat-icon>
+                    À rendre le {{a.dateDeRendu}}
+                  </div>
+                </ng-template>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</main>
+
